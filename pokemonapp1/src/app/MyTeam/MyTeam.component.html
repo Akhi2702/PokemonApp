@@ -1,0 +1,21 @@
+<div>
+    <h1 style="background-color: rgba(0,0,0,0.7);text-align: center;color:yellow;text-shadow: 0 0 5px blue,0 0 5px blue;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-bottom: 50px;">MY TEAM</h1>
+    <ng-container *ngFor="let item of details ">
+        <div class="pokemon-grid">
+            <div class="box">
+                <h1>#{{item.idd}}</h1>
+                <img  [src]="item.poke_img" alt="Pokemon">
+                <h3>{{item.poke_name}}</h3>
+                <!--<table>
+                    <tr>
+                        {{details.stats[0]?.base_stat}}
+                        <th>xP:</th>
+                        <td>  {{details.stats[0]?.base_stat}},{{details.xp[1]?.xp?.name}}</td>
+                    </tr>
+                </table> -->
+        <b>xP :</b> {{item.poke_xp}}
+            </div>
+        
+        </div>
+        </ng-container>
+</div>

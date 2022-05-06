@@ -1,0 +1,28 @@
+
+.box{
+    width: 25%;
+    height: 300px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+    display: grid;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 100px;
+    background: linear-gradient(rgb(171, 224, 233),rgb(164, 164, 235));
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+img{
+    max-width: 200px;
+    display: block;
+    margin: auto;
+}
+h1{
+    text-align: left;
+}
+a{
+    background-color: gray;
+}

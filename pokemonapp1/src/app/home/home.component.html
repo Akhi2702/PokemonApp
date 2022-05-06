@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="home.component.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+  <nav class="navbar" id="nav1">
+    <div class="wrapper">
+      <input type="checkbox" id="btn" hidden>
+      <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </label>
+      <nav id="sidebar">
+        <div class="title">Menu</div>
+        <ul class="list-items">
+          <li><a [routerLink]="['/MyTeamComponent']"><i class="fas fa-bars"></i>My-Team</a></li>
+          <li><a [routerLink]="['/leadership']"><i class="fas fa-sliders-h"></i>Leadership-Board</a></li>
+          <div class="icons">
+            <a href="https://www.facebook.com/Pokemon/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/Pokemon/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/user/pokemon" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.pokemon.com/us/" target="_blank"><i class="fa-solid fa-dragon"></i></a>
+          </div>
+        </ul>
+      </nav>
+    </div>
+    <a class="navbar-brand">
+        <img class="logo" src="assets/images/logo.png" style="width: 150px;margin-right: 300px;">
+    </a>
+    <a style="color: white;font-size: larger;">
+      <pre><b>Your Xp : {{userDetails.xpRating}}</b></pre>
+    </a>
+    </nav>
+
+
+<input type="text" name="name" class="btn btn-success" placeholder="Search....." [(ngModel)]="name"  (ngModelChange)="SearchPokemon($event)" ngDefaultControl style="padding: 5px;">
+<div class="pokemon-grid">
+    <div class="box"  *ngFor="let pokemon of pokemons">
+        <h1>#{{pokemon.id}}</h1>
+        <img routerLink="/details/{{pokemon.id}}" [src]="pokemon.sprites.front_default" alt="Pokemon">
+        <h3><b><i>{{pokemon.name | uppercase}}</i></b></h3>
+        <p>
+            <b>xP: </b>{{pokemon.stats[0].base_stat}}
+        </p>
+        <button class="btn btn-success" style="border-radius: 20px;padding: 5px;" (click)="addtoteam(pokemon)">Add to Team+</button>
+    </div>
+</div>
+
+</body>
+</html>

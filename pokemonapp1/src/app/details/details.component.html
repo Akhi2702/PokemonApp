@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <div class="pokemon-grid">
+        <div class="box" >
+            <div class="wrapper">
+                <div class="item"><img [src]="details.sprites.front_default"></div>
+                <div class="item"><img [src]="details.sprites.front_shiny"></div>
+                <div class="item"><img [src]="details.sprites.back_default"></div>
+                <div class="item"><img [src]="details.sprites.back_shiny"></div>
+            </div>
+            <h3>{{details.name | uppercase}}</h3>
+
+            <p style="color: red;">"<i>{{des.descriptions[7].description}}</i>"</p>
+            
+            <table class="table">
+                <tbody>
+                  <tr class="table-light">
+                    <th scope="row">#</th>
+                    <td>{{details.id}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Ability</th>
+                    <td>{{details.abilities[0].ability.name}}</td>
+                  </tr>
+                  <tr class="table-light">
+                    <th scope="row">Type</th>
+                    <td>{{details.types[0].type.name}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Height</th>
+                    <td>{{details.height}}</td>
+                  </tr>
+                  <tr class="table-light">
+                    <th scope="row">Weight</th>
+                    <td>{{details.weight}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">xP</th>
+                    <td>{{details.stats[0].base_stat}}</td>
+                  </tr>
+                  <tr class="table-light">
+                    <th scope="row">Attack</th>
+                    <td>{{details.stats[1].base_stat}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Defense</th>
+                    <td>{{details.stats[2].base_stat}}</td>
+                  </tr>
+                  <tr class="table-light">
+                    <th scope="row">Special_Attack</th>
+                    <td>{{details.stats[3].base_stat}}</td>
+                  </tr>
+                  <tr >
+                    <th scope="row">Special_Defense</th>
+                    <td>{{details.stats[4].base_stat}}</td>
+                  </tr>
+                  <tr class="table-light">
+                    <th scope="row">Speed</th>
+                    <td>{{details.stats[5].base_stat}}</td>
+                  </tr>
+                </tbody>
+              </table>
+    
+        </div>
+    
+    </div>
+    
+

@@ -1,0 +1,8 @@
+<div>
+    <h1 style="background-color: rgba(0,0,0,0.7);text-align: center;color:yellow;text-shadow: 0 0 5px blue,0 0 5px blue;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-bottom: 50px;">LEADERSHIP BOARD</h1>
+    <div *ngFor="let user of details">
+        <pre style="background: linear-gradient(rgb(171, 224, 233),rgb(164, 164, 235));text-align: center;border-radius: 20px;padding-top: 15px;width: 50%;margin-left: auto;margin-right: auto;display: block;margin-top: 0%;margin-bottom: 0%;padding-right: 90px;">
+            <b>{{user.userName |uppercase}}                       {{user.xpRating}}</b>
+        </pre>
+    </div>
+</div>
